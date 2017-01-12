@@ -13,9 +13,6 @@ gem 'aws-sdk', '2.2.4'
 # System settings
 gem "config", '~> 1.0.0'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-
 # Strips away unnessary views/helpers directories to enhance API performance
 gem 'rails-api'
 
@@ -27,9 +24,6 @@ gem 'devise'
 
 # Use to handle authorization to API from HTTP request
 gem 'jwt'
-
-# Use to handle cross-origin protection
-gem 'rack-cors'
 
 # Allows the use of responds_to with rails-api gem
 gem 'responders'
@@ -53,6 +47,8 @@ group :development, :test do
 
   # YARD documentation generation tool: http://yardoc.org/
   gem 'yard', '~> 0.9.5'
+  # Use to handle cross-origin protection
+  gem 'rack-cors'
 end
 
 group :development do

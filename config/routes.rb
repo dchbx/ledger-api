@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :employer_profiles, except: [:new, :edit]
+  resources :organizations, except: [:new, :edit]
   resources :employers, except: [:new, :edit]
   devise_for :users, controllers: {
           sessions: 'users/sessions',

@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101223641) do
+ActiveRecord::Schema.define(version: 20170112124327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "employer_profiles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employers", force: :cascade do |t|
     t.string   "hbx_id"
@@ -27,6 +32,20 @@ ActiveRecord::Schema.define(version: 20170101223641) do
     t.datetime "updated_at",    null: false
     t.date     "registered_on"
   end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "hbx_id"
+    t.string   "legal_name"
+    t.string   "dba_name"
+    t.string   "fein"
+    t.string   "account_number", limit: 20
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "organizations", ["account_number"], name: "index_organizations_on_account_number", using: :btree
+  add_index "organizations", ["fein"], name: "index_organizations_on_fein", using: :btree
+  add_index "organizations", ["hbx_id"], name: "index_organizations_on_hbx_id", unique: true, using: :btree
 
   create_table "plutus_accounts", force: :cascade do |t|
     t.string   "name"

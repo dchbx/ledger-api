@@ -1,5 +1,5 @@
 class EmployersController < ApplicationController
-  
+  before_filter :verify_jwt_token
   def index
     @employers = Employer.all
     render json: @employers
@@ -26,7 +26,7 @@ class EmployersController < ApplicationController
   end
   
   def destroy
-    @employer.find(params[:id])
+     @employer = Employer.find(params[:id])
     @employer.destroy
   end
   
