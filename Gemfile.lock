@@ -52,10 +52,12 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.6)
+    coderay (1.1.1)
     concurrent-ruby (1.0.3)
     config (1.0.0)
       activesupport (>= 3.0)
       deep_merge (~> 1.0.0)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     deep_merge (1.0.1)
     devise (4.2.0)
@@ -66,6 +68,11 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.8.0)
+      factory_girl (~> 4.8.0)
+      railties (>= 3.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -84,6 +91,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -97,6 +105,21 @@ GEM
       jquery-rails (>= 3.0)
       jquery-ui-rails (>= 4.0)
       rails (~> 4.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     rack (1.6.5)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -149,6 +172,10 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rspec_junit_formatter (0.2.3)
+      builder (< 4)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -179,16 +206,24 @@ DEPENDENCIES
   aws-sdk (= 2.2.4)
   byebug
   config (~> 1.0.0)
+  database_cleaner
   devise
+  factory_girl_rails
   jwt
   pg (~> 0.15)
   plutus
+  pry
+  pry-byebug
+  pry-rails
+  pry-remote
+  pry-stack_explorer
   rack-cors
   rails (= 4.2.7)
   rails-api
   rb-readline
   responders
   rspec-rails (~> 3.5)
+  rspec_junit_formatter
   spring
   web-console (~> 2.0)
   yard (~> 0.9.5)

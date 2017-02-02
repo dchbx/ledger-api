@@ -43,7 +43,19 @@ gem 'rb-readline'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
   gem 'rspec-rails', '~> 3.5'
+  gem 'rspec_junit_formatter'
+
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'pry-remote'
+
+  gem 'factory_girl_rails'
+
+  gem 'database_cleaner'
 
   # YARD documentation generation tool: http://yardoc.org/
   gem 'yard', '~> 0.9.5'
