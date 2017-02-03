@@ -228,6 +228,7 @@ DEPENDENCIES
   rspec_junit_formatter
   shoulda-matchers
   spring
+  warden
   web-console (~> 2.0)
   yard (~> 0.9.5)
 
