@@ -1,4 +1,10 @@
 describe "Employers API" do
+
+  before(:each) do
+  #ApplicationController.any_instance.stub(:verify_jwt_token => true)
+  allow_any_instance_of(ApplicationController).to receive(:verify_jwt_token).and_return(true)
+  end
+
   it 'retrieves employers information' do
     employer = FactoryGirl.create(:employer)
     get '/employers.json'
