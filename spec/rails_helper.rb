@@ -67,8 +67,8 @@ RSpec.configure do |config|
   config.include ModelMatcherHelpers, :type => :model
   config.include Devise::Test::ControllerHelpers, :type => :controller
   config.include Devise::TestHelpers, :type => :view
-  config.extend ControllerMacros, :type => :controller #real logins for integration testing
-  config.include ControllerHelpers, :type => :controller #stubbed logins for unit testing
+  #config.extend ControllerMacros, :type => :controller #real logins for integration testing
+  #config.include ControllerHelpers, :type => :controller #stubbed logins for unit testing
   config.include FactoryGirl::Syntax::Methods
 
 
