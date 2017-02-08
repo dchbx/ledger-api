@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fms_roles, except: [:new, :edit]
+  resources :people, except: [:new, :edit]
   resources :employer_profiles, except: [:new, :edit]
   resources :organizations, except: [:new, :edit]
   resources :employers, except: [:new, :edit]
