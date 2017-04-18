@@ -1,0 +1,2 @@
+class FmsRolesController < ApplicationController
+end
